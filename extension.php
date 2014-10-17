@@ -37,7 +37,7 @@ class Extension extends \Bolt\BaseExtension
             return new \Twig_Markup("You must provide a gist to embed.", 'UTF-8');
         }
 
-        if (strpos($gist, ".js") === false) {
+        if (substr($gist, -3) !== ".js") {
             $gist .= ".js";
         }
 
