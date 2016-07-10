@@ -1,0 +1,34 @@
+{
+    "name": "bolt/github-gist",
+    "description": "Embed GitHub Gists",
+    "type": "bolt-extension",
+    "keywords": [
+        "GitHub",
+        "gist"
+    ],
+    "require": {
+        "bolt/bolt": "^3.0"
+    },
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Bob den Otter",
+            "email": "bob@twokings.nl"
+        },
+        {
+            "name": "Gawain Lynch",
+            "email": "gawain.lynch@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bolt\\Extension\\Bolt\\GitHubGist\\": "src"
+        }
+    },
+    "extra": {
+        "bolt-class": "Bolt\\Extension\\Bolt\\GitHub\\GitHubGistExtension",
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
