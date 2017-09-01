@@ -1,6 +1,6 @@
 <?php
 
-namespace Bolt\Extension\BoltGitHubGist;
+namespace Bolt\Extension\Bolt\GitHubGist;
 
 use Bolt\Extension\SimpleExtension;
 

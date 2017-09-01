@@ -1,6 +1,6 @@
 {
     "name": "bolt/github-gist",
-    "description": "Embed GitHub Gists",
+    "description": "Embed GitHub Gists into your templates",
     "type": "bolt-extension",
     "keywords": [
         "GitHub",
@@ -26,7 +26,7 @@
         }
     },
     "extra": {
-        "bolt-class": "Bolt\\Extension\\Bolt\\GitHub\\GitHubGistExtension",
+        "bolt-class": "Bolt\\Extension\\Bolt\\GitHubGist\\GitHubGistExtension",
         "bolt-icon": "icon.png",
         "branch-alias": {
             "dev-master": "3.0.x-dev"
