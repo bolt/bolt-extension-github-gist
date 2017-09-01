@@ -17,13 +17,12 @@ class GitHubGistExtension extends SimpleExtension
      *
      * @return \Twig_Markup
      */
-    public function twigGist($gist = null)
+    public function gistCallback($gist = null)
     {
         if ($gist === null) {
-            return new \Twig_Markup('You must provide a gist to embed.', 'UTF-8');
+            return new \Twig_Markup('You must provide a gist ID to embed.', 'UTF-8');
         }
-
-        $html = sprintf('<script src="//gist.github.com/%s"></script>', $gist);
+        $html = sprintf('<script src="https://gist.github.com/%s.js"></script>', $gist);
 
         return new \Twig_Markup($html, 'UTF-8');
     }
@@ -34,7 +33,15 @@ class GitHubGistExtension extends SimpleExtension
     protected function registerTwigFunctions()
     {
         return [
-            'gist', 'twigGist'
+            'gist' => 'gistCallback',
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function isSafe()
+    {
+        return true;
     }
 }
